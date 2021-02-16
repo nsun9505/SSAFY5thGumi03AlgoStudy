@@ -27,14 +27,19 @@
 ### :family_man_girl:Repository 규칙
 
 >  [사이트 이름]/[문제번호] 문제 이름/계정/READMD.md
+>
 >  [사이트 이름]/[문제번호] 문제 이름/계정/XXX.java
 >
 > e.g) BOJ/[13460] 구슬 탈출2/nsun9505/Main.java
+>
 > e.g) BOJ/[13460] 구슬 탈출2/nsun9505/Readme.md
 >
 > BOJ/[문제번호] 문제 이름/계정/README.md
+>
 > Programmers/문제 이름/계정/README.md
+>
 > SWEA/[문제번호] 문제 이름/계정/README.md
+>
 > Jungol/[문제번호] 문제 이름/계정/README.md
 
 
