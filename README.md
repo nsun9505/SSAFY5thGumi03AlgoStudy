@@ -34,13 +34,13 @@
 >
 > e.g) BOJ/[13460] 구슬 탈출2/nsun9505/Readme.md
 >
-> BOJ/[문제번호] 문제 이름/계정/README.md
+> 백준 : BOJ/[문제번호] 문제 이름/계정/README.md
 >
-> Programmers/문제 이름/계정/README.md
+> 프로그래머스 : Programmers/문제 이름/계정/README.md
 >
-> SWEA/[문제번호] 문제 이름/계정/README.md
+> 삼성 SW 아카데미 : SWEA/[문제번호] 문제 이름/계정/README.md
 >
-> Jungol/[문제번호] 문제 이름/계정/README.md
+> 정올 : Jungol/[문제번호] 문제 이름/계정/README.md
 
 
 ###  :family_man_girl: Contributors
