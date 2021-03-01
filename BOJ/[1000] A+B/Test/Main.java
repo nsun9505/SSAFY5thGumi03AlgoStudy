@@ -1,10 +1,3 @@
-## [1000] A+B – JAVA
-
-## 분류
-> 구현
-
-## 코드
-```java
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -23,8 +16,3 @@ public class Main {
         br.close();
     }
 }
-```
-
-## 문제 풀이
-나는 이렇게 접근해서 이런 아이디어로 풀었어요!
-
