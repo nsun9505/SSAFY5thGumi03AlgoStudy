@@ -83,7 +83,8 @@
 
   |                     |                              월                              |                              화                              |                              수                              |                              목                              |                              금                              |
 | :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| 0주차(X)  |     [A+B](https://www.acmicpc.net/problem/1000)     |     []()     |          []()          |      []()      |    []()    |
+| 1주차(03.02 ~ 03.05)  |     X     |     [AC](https://www.acmicpc.net/problem/5430)     |          [회문](https://www.acmicpc.net/problem/17609)          |      []()      |    [톱니바퀴](https://www.acmicpc.net/problem/14891)    |
+| 2주차(03.08 ~ 03.12)  |     [스택 수열](https://www.acmicpc.net/problem/1874)     |     [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)     |          [위장](https://programmers.co.kr/learn/courses/30/lessons/42578)          |      [최소힙](https://www.acmicpc.net/problem/1927)      |    [뱀](https://www.acmicpc.net/problem/3190)    |
 
 <br>
 
