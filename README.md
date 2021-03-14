@@ -85,6 +85,7 @@
 | :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | 1주차(03.02 ~ 03.05)  |     X     |     [AC](https://www.acmicpc.net/problem/5430)     |          [회문](https://www.acmicpc.net/problem/17609)          |      []()      |    [톱니바퀴](https://www.acmicpc.net/problem/14891)    |
 | 2주차(03.08 ~ 03.12)  |     [스택 수열](https://www.acmicpc.net/problem/1874)     |     [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)     |          [위장](https://programmers.co.kr/learn/courses/30/lessons/42578)          |      [최소힙](https://www.acmicpc.net/problem/1927)      |    [뱀](https://www.acmicpc.net/problem/3190)    |
+| 3주차(03.15 ~ 03.19)  |     [트럭](https://www.acmicpc.net/problem/13335)     |     [후보 추천하기](https://www.acmicpc.net/problem/1713)     | [아기상어](https://www.acmicpc.net/problem/16236)    |          [벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu)          |      [핀볼게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo)      |
 
 <br>
 
