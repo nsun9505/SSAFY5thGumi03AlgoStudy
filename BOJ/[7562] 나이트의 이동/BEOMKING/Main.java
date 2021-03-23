@@ -1,10 +1,5 @@
-# [7562] 나이트의 이동
+package DFSBFS;
 
-## 분류
-> BFS
-
-## 코드
-```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class 백준_7562_나이트의이동 {
     static int dy[] = new int[]{-1, -2, -2, -1, 1, 2, 2, 1};
     static int dx[] = new int[]{-2, -1, 1, 2, 2, 1, -1, -2};
 
@@ -69,11 +64,3 @@ public class Main {
         }
     }
 }
-```
-
-## 문제풀이
-한 번 움직임에 가로 2, 세로 1 - 세로2, 가로 1을 움직이는 BFS입니다.
-
-처음 시작 값을 큐에 추가 시키고 모든 경우의 수를 큐에 넣어서 큐가 빌 때까지 반복하게 됩니다.
-
-도착이 불가한 지점은 테스트 케이스에 존재 하지않습니다.
