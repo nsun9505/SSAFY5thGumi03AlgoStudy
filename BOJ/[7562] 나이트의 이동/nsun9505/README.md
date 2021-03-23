@@ -5,75 +5,93 @@
 
 ## 코드
 ```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
-
 public class Main {
-    static int dy[] = new int[]{-1, -2, -2, -1, 1, 2, 2, 1};
-    static int dx[] = new int[]{-2, -1, 1, 2, 2, 1, -1, -2};
-
+    static int[] dx = {-1, -2, -2, -1, 1, 2, 2, 1};
+    static int[] dy = {-2, -1,  1,  2, 2, 1, -1, -2};
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = null;
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(br.readLine());
-
-        for (int t = 0; t < T; t++) {
+        Element start = new Element(0 , 0, 0);
+        Element end = new Element(0, 0, 0);
+        boolean[][] visited = new boolean[300][300];
+        Queue<Element> queue = new LinkedList<>();
+        for(int t=0; t<T; t++){
+            int N = Integer.parseInt(br.readLine());
+            // 방문 표시 배열 초기화
+            for(int i=0; i<N; i++)
+                Arrays.fill(visited[i], false);
+            // 큐 초기화
+            queue.clear();
+            // 시작 지점 입력 받기
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            start.row = Integer.parseInt(st.nextToken());
+            start.col = Integer.parseInt(st.nextToken());
+            // 끝나는 지점 입력 받기
+            st = new StringTokenizer(br.readLine());
+            end.row = Integer.parseInt(st.nextToken());
+            end.col = Integer.parseInt(st.nextToken());
+            // 시작 위치 큐에 넣고 방문 표시
+            queue.offer(start);
+            visited[start.row][start.col] = true;
             int answer = 0;
-            int I = Integer.parseInt(br.readLine());
-            boolean visited[][] = new boolean[I][I];
-            st = new StringTokenizer(br.readLine());
-            int y = Integer.parseInt(st.nextToken());
-            int x = Integer.parseInt(st.nextToken());
-            Knight knight = new Knight(y, x, 0);
-            st = new StringTokenizer(br.readLine());
-            int ty = Integer.parseInt(st.nextToken());
-            int tx = Integer.parseInt(st.nextToken());
-
-            Queue<Knight> queue = new LinkedList<>();
-            queue.offer(knight); // 시작점 추가
-            visited[y][x] = true; // 방문 체크
-
+            // BFS!!!
             while(!queue.isEmpty()){
-                Knight now = queue.poll();
-                if(now.y == ty && now.x == tx) { // 현재 위치가 목표 위치와 같다면
-                    answer = now.move;
+                Element cur = queue.poll();
+                // 현재 지점이 끝나는 지점이라면 답으로 출력하기 위해
+                // 끝나는 지점까지 걸린 이동 횟수를 저장하고 종료
+                if(cur.row == end.row && cur.col == end.col){
+                    answer = cur.dist;
                     break;
                 }
-
-                for (int i = 0; i < 8; i++) {
-                    int ny = now.y + dy[i];
-                    int nx = now.x + dx[i];
-                    if(ny < 0 || ny >= I || nx < 0 || nx >= I || visited[ny][nx]) continue;
-                    visited[ny][nx] = true;
-                    queue.offer(new Knight(ny, nx, now.move + 1)); // 바뀐 위치, 움직인 거리
+                // 총 8 방향에 대해서 BFS를 돌립니다.
+                for(int dir=0; dir<8; dir++){
+                    int nx = cur.row + dx[dir];
+                    int ny = cur.col + dy[dir];
+                    // 체스판을 벗어나는 경우
+                    if(nx < 0 || ny < 0 || nx >= N || ny >= N)
+                        continue;
+                    // 이미 방문한 경우
+                    if(visited[nx][ny])
+                        continue;
+                    // 다음 위치가 체스판 안이고, 아직 방문하지 않았다면 방문
+                    visited[nx][ny] = true;
+                    queue.offer(new Element(nx, ny, cur.dist+1));
                 }
             }
-            sb.append(answer + "\n");
+            sb.append(answer+"\n");
         }
-        System.out.print(sb.toString().trim());
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
+        br.close();
     }
-
-    static class Knight{
-        int y;
-        int x;
-        int move;
-        public Knight(int y, int x, int move) {
-            this.y = y;
-            this.x = x;
-            this.move = move;
+    static class Element {
+        int row;
+        int col;
+        int dist;
+        public Element(int row, int col, int dist) {
+            this.row = row;
+            this.col = col;
+            this.dist = dist;
         }
     }
 }
 ```
 
 ## 문제풀이
-한 번 움직임에 가로 2, 세로 1 - 세로2, 가로 1을 움직이는 BFS입니다.
+BFS를 사용하면 쉽게 풀 수 있습니다.
 
-처음 시작 값을 큐에 추가 시키고 모든 경우의 수를 큐에 넣어서 큐가 빌 때까지 반복하게 됩니다.
+나이트가 최소 몇 번만에 이동할 수 있는지 알아보는 문제이므로 BFS를 사용하여 최소 거리를 구하면 되겠습니다.
 
-도착이 불가한 지점은 테스트 케이스에 존재 하지않습니다.
+이전까지는 4방향 상하좌우만 탐색했다면, 이 문제는 8방향에 대해 BFS를 돌리면 문제가 풀립니다.
+
+그리고 처음 위치와 시작 위치가 같을 수 있으므로 다음 방문 위치가 끝나는 지점인지 체크하지 않고
+
+현재 위치가 끝나는 위치인지 체크하도록 해서 문제를 풀었습니다.
