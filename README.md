@@ -87,6 +87,7 @@
 | 2주차(03.08 ~ 03.12)  |     [스택 수열](https://www.acmicpc.net/problem/1874)     |     [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)     |          [위장](https://programmers.co.kr/learn/courses/30/lessons/42578)          |      [최소힙](https://www.acmicpc.net/problem/1927)      |    [뱀](https://www.acmicpc.net/problem/3190)    |
 | 3주차(03.15 ~ 03.19)  |     [트럭](https://www.acmicpc.net/problem/13335)     |     [후보 추천하기](https://www.acmicpc.net/problem/1713)     | [아기상어](https://www.acmicpc.net/problem/16236)    |          [벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu)          |      [핀볼게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo)      |
 | 4주차(03.22 ~ 03.26)  |     [나이트의 이동](https://www.acmicpc.net/problem/7562)     |     [트리의 부모 찾기](https://www.acmicpc.net/problem/11725)     | [숨바꼭질](https://www.acmicpc.net/problem/1697)    |          [모양만들기](https://www.acmicpc.net/problem/16932)          |      [확장 게임](https://www.acmicpc.net/problem/16920)      |
+| 5주차(03.29 ~ 04.02)  |     [N과 M(4)](https://www.acmicpc.net/problem/15652)     |     [로또](https://www.acmicpc.net/problem/6603)     | [N-Queen](https://www.acmicpc.net/problem/9663)    |          [가르침](https://www.acmicpc.net/problem/1062)          |      [스도쿠](https://www.acmicpc.net/problem/2580)      |
 <br>
 
 ### **모두 화이팅!!!**
