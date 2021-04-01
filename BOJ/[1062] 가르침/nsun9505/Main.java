@@ -1,13 +1,10 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
     static int N, K;
     static int[] strings;
     static int answer = 0;
-    static ArrayList<Integer> list = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -17,22 +14,20 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
         strings = new int[N];
-        HashSet<Integer> letterSet = new HashSet<>();
+
+        // 기본적으로 anta, tica가 붙음.
+        int letter = 0;
+        for(char ch : new char[]{'a', 'n', 't', 'i', 'c'})
+            letter |= (1 << (ch - 'a'));
 
         for(int i=0; i<N; i++) {
             char[] tmp = br.readLine().toCharArray();
-            int num = 0;
-            for(int idx=0; idx<tmp.length; idx++){
-                num |= (1 << (tmp[idx] - 'a'));
-                if(letterSet.contains((1 << (tmp[idx] - 'a'))))
-                    continue;
-                letterSet.add((1 << (tmp[idx] - 'a')));
-            }
-            strings[i] = num;
+            for(int idx=0; idx<tmp.length; idx++)
+                strings[i] |= (1 << (tmp[idx] - 'a'));
         }
-        list.addAll(letterSet);
 
-        solution(0, 0, 0);
+        // 남극 단어는 a, n, t, i, c가 있어야 앞부분과 뒷부분의 글자를 읽을 수 있음.
+        solution(5, 0, letter);
         sb.append(answer);
 
         bw.write(sb.toString());
@@ -44,10 +39,11 @@ public class Main {
     public static void solution(int cntOfLetter, int index, int letters){
         if(cntOfLetter > K)
             return;
-        if(cntOfLetter == K || index >= list.size()){
+        if(cntOfLetter == K){
             int cnt = 0;
             for(int i=0; i<N; i++){
-                // 지금까지 배운 글자로 입력 받은 단어를 읽을 수 있는지 검사
+                // AND 연산을 해서 strings[i]가 그대로 나온다는 것은
+                // letters에 strings[i]에 대한 비트가 모두 켜져있음.
                 if((strings[i] & letters) == strings[i])
                     cnt++;
             }
@@ -55,9 +51,11 @@ public class Main {
             return;
         }
 
-        // 단어 배우기
-        for(int i=index; i<list.size(); i++){
-            solution(cntOfLetter+1, i+1, (letters | list.get(i)));
+        // 입력으로 주어진 단어에 포함된 글자만 배울 필요는 없음.
+        for(int i=index; i<26; i++){
+            // 아직 배우지 못한 글자라면
+            if((letters & (1 << i)) == 0)
+                solution(cntOfLetter+1, i+1, (letters | (1 << i)));
         }
     }
 }
