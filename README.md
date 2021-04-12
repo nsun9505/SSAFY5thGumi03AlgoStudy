@@ -89,6 +89,7 @@
 | 4주차(03.22 ~ 03.26)  |     [나이트의 이동](https://www.acmicpc.net/problem/7562)     |     [트리의 부모 찾기](https://www.acmicpc.net/problem/11725)     | [숨바꼭질](https://www.acmicpc.net/problem/1697)    |          [모양만들기](https://www.acmicpc.net/problem/16932)          |      [확장 게임](https://www.acmicpc.net/problem/16920)      |
 | 5주차(03.29 ~ 04.02)  |     [N과 M(4)](https://www.acmicpc.net/problem/15652)     |     [로또](https://www.acmicpc.net/problem/6603)     | [N-Queen](https://www.acmicpc.net/problem/9663)    |          [가르침](https://www.acmicpc.net/problem/1062)          |      [스도쿠](https://www.acmicpc.net/problem/2580)      |
 | 6주차(04.05 ~ 04.09)  |     [퇴사](https://www.acmicpc.net/problem/14501)     |     [동전 0](https://www.acmicpc.net/problem/11047)     | [포도주 시식](https://www.acmicpc.net/problem/2156)    |          [쉬운 계단 수](https://www.acmicpc.net/problem/10844)          |      [단어 수학](https://www.acmicpc.net/problem/1339)      |
+| 7주차(04.12 ~ 04.16)  |     [수찾기](https://www.acmicpc.net/problem/1920)     |     [나무 자르기](https://www.acmicpc.net/problem/2805)     | [랜선 자르기](https://www.acmicpc.net/problem/1654)    |          [두 용액](https://www.acmicpc.net/problem/2470)          |      [반도체 설계](https://www.acmicpc.net/problem/2352)      |
 <br>
 
 ### **모두 화이팅!!!**
